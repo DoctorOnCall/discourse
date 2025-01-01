@@ -86,7 +86,7 @@ gem 'rake'
 
 gem 'thor', require: false
 gem 'rinku'
-gem 'sanitize'
+gem 'sanitize', '>= 7.0.0'
 gem 'sidekiq'
 
 # for sidekiq web
