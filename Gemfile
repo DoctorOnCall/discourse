@@ -87,7 +87,7 @@ gem 'rake'
 gem 'thor', require: false
 gem 'rinku'
 gem 'sanitize'
-gem 'sidekiq'
+gem 'sidekiq', '>= 6.1.0'
 
 # for sidekiq web
 gem 'tilt', require: false
@@ -95,7 +95,7 @@ gem 'tilt', require: false
 gem 'execjs', require: false
 gem 'mini_racer'
 gem 'highline', '~> 1.7.0', require: false
-gem 'rack-protection' # security
+gem 'rack-protection' , '>= 4.0.0' # security
 
 # Gems used only for assets and not required in production environments by default.
 # Allow everywhere for now cause we are allowing asset debugging in production
