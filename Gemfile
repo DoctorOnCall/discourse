@@ -13,14 +13,14 @@ if rails_master?
   gem 'rails', git: 'https://github.com/rails/rails.git'
   gem 'seed-fu', git: 'https://github.com/SamSaffron/seed-fu.git', branch: 'discourse'
 else
-  gem 'actionmailer', '5.2'
-  gem 'actionpack', '5.2'
-  gem 'actionview', '5.2'
+  gem 'actionmailer', '7.1.0'
+  gem 'actionpack', '7.1.0'
+  gem 'actionview', '5.2.1'
   gem 'activemodel', '5.2'
   gem 'activerecord', '5.2'
   gem 'activesupport', '5.2'
-  gem 'railties', '5.2'
-  gem 'sprockets-rails'
+  gem 'railties', '7.1.0'
+  gem 'sprockets-rails', '>= 3.2.2'
   gem 'seed-fu'
 end
 
@@ -32,20 +32,20 @@ gem 'hiredis'
 gem 'redis', require:  ["redis", "redis/connection/hiredis"]
 gem 'redis-namespace'
 
-gem 'active_model_serializers', '~> 0.8.3'
+gem 'active_model_serializers', '~> 0.9.0'
 
-gem 'onebox', '1.8.55'
+gem 'onebox', '1.8.57'
 
 gem 'http_accept_language', '~>2.0.5', require: false
 
-gem 'ember-rails', '0.18.5'
+gem 'ember-rails', '0.19.0'
 gem 'ember-source', '2.13.3'
-gem 'ember-handlebars-template', '0.7.5'
+gem 'ember-handlebars-template', '0.9.0'
 gem 'barber'
 
-gem 'message_bus'
+gem 'message_bus', '>= 2.1.6'
 
-gem 'rails_multisite'
+gem 'rails_multisite', '>= 5.0.0'
 
 gem 'fast_xs', platform: :mri
 
@@ -54,7 +54,7 @@ gem 'fast_xor', platform: :mri
 
 gem 'fastimage'
 
-gem 'aws-sdk-s3', require: false
+gem 'aws-sdk-s3', '>= 1.15.0', require: false
 gem 'excon', require: false
 gem 'unf', require: false
 
@@ -66,17 +66,17 @@ gem 'multi_json'
 gem 'mustache'
 gem 'nokogiri'
 
-gem 'omniauth'
-gem 'omniauth-openid'
+gem 'omniauth', '>= 2.1.0'
+gem 'omniauth-openid', '>= 2.0.1'
 gem 'openid-redis-store'
-gem 'omniauth-facebook'
+gem 'omniauth-facebook', '>= 6.0.0'
 gem 'omniauth-twitter'
 gem 'omniauth-instagram'
-gem 'omniauth-github'
+gem 'omniauth-github', '>= 2.0.0'
 
-gem 'omniauth-oauth2', require: false
+gem 'omniauth-oauth2', '>= 1.7.1', require: false
 
-gem 'omniauth-google-oauth2'
+gem 'omniauth-google-oauth2', '>= 0.5.4'
 gem 'oj'
 gem 'pg'
 gem 'mini_sql'
@@ -86,7 +86,7 @@ gem 'rake'
 
 gem 'thor', require: false
 gem 'rinku'
-gem 'sanitize'
+gem 'sanitize', '>= 6.0.0'
 gem 'sidekiq'
 
 # for sidekiq web
@@ -95,7 +95,7 @@ gem 'tilt', require: false
 gem 'execjs', require: false
 gem 'mini_racer'
 gem 'highline', '~> 1.7.0', require: false
-gem 'rack-protection' # security
+gem 'rack-protection' , '>= 2.0.4' # security
 
 # Gems used only for assets and not required in production environments by default.
 # Allow everywhere for now cause we are allowing asset debugging in production
@@ -108,7 +108,7 @@ group :test do
   gem 'webmock', require: false
   gem 'fakeweb', '~> 1.3.0', require: false
   gem 'minitest', require: false
-  gem 'danger'
+  gem 'danger', '>= 6.0.0'
 end
 
 group :test, :development do
@@ -121,9 +121,9 @@ group :test, :development do
   gem 'mocha', require: false
   gem 'rb-fsevent', require: RUBY_PLATFORM =~ /darwin/i ? 'rb-fsevent' : false
   gem 'rb-inotify', '~> 0.9', require: RUBY_PLATFORM =~ /linux/i ? 'rb-inotify' : false
-  gem 'rspec-rails', require: false
-  gem 'shoulda', require: false
-  gem 'rspec-html-matchers'
+  gem 'rspec-rails', '>= 3.8.0', require: false
+  gem 'shoulda', '>= 3.6.0', require: false
+  gem 'rspec-html-matchers', '>= 0.9.2'
   gem 'pry-nav'
   gem 'byebug', require: ENV['RM_INFO'].nil?
   gem 'rubocop', require: false
@@ -131,10 +131,10 @@ end
 
 group :development do
   gem 'ruby-prof', require: false
-  gem 'bullet', require: !!ENV['BULLET']
-  gem 'better_errors'
+  gem 'bullet', '>= 5.7.6', require: !!ENV['BULLET']
+  gem 'better_errors', '>= 2.5.0'
   gem 'binding_of_caller'
-  gem 'annotate'
+  gem 'annotate', '>= 2.7.5'
   gem 'foreman', require: false
 end
 
@@ -153,7 +153,7 @@ gem 'htmlentities', require: false
 #  we are open to it. by deferring require to the initializer we can configure discourse installs without it
 
 gem 'flamegraph', require: false
-gem 'rack-mini-profiler', require: false
+gem 'rack-mini-profiler', '>= 1.0.1', require: false
 
 gem 'unicorn', require: false, platform: :mri
 gem 'puma', require: false
@@ -161,14 +161,14 @@ gem 'rbtrace', require: false, platform: :mri
 gem 'gc_tracer', require: false, platform: :mri
 
 # required for feed importing and embedding
-gem 'ruby-readability', require: false
+gem 'ruby-readability', '>= 0.7.1', require: false
 
 gem 'stackprof', require: false, platform: :mri
 gem 'memory_profiler', require: false, platform: :mri
 
 gem 'cppjieba_rb', require: false
 
-gem 'lograge', require: false
+gem 'lograge', '>= 0.11.0', require: false
 gem 'logstash-event', require: false
 gem 'logstash-logger', require: false
 gem 'logster'
