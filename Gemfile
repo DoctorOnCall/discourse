@@ -34,7 +34,7 @@ gem 'redis-namespace'
 
 gem 'active_model_serializers', '~> 0.8.3'
 
-gem 'onebox', '1.8.55'
+gem 'onebox', '1.8.57'
 
 gem 'http_accept_language', '~>2.0.5', require: false
 
@@ -86,7 +86,7 @@ gem 'rake'
 
 gem 'thor', require: false
 gem 'rinku'
-gem 'sanitize'
+gem 'sanitize', '>= 6.0.0'
 gem 'sidekiq'
 
 # for sidekiq web
