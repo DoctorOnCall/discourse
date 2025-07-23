@@ -13,14 +13,14 @@ if rails_master?
   gem 'rails', git: 'https://github.com/rails/rails.git'
   gem 'seed-fu', git: 'https://github.com/SamSaffron/seed-fu.git', branch: 'discourse'
 else
-  gem 'actionmailer', '5.2'
-  gem 'actionpack', '5.2'
-  gem 'actionview', '5.2'
+  gem 'actionmailer', '5.2.1'
+  gem 'actionpack', '5.2.1'
+  gem 'actionview', '5.2.1'
   gem 'activemodel', '5.2'
   gem 'activerecord', '5.2'
   gem 'activesupport', '5.2'
-  gem 'railties', '5.2'
-  gem 'sprockets-rails'
+  gem 'railties', '5.2.1'
+  gem 'sprockets-rails', '>= 3.2.2'
   gem 'seed-fu'
 end
 
@@ -34,18 +34,18 @@ gem 'redis-namespace'
 
 gem 'active_model_serializers', '~> 0.8.3'
 
-gem 'onebox', '1.8.55'
+gem 'onebox', '1.8.57'
 
 gem 'http_accept_language', '~>2.0.5', require: false
 
-gem 'ember-rails', '0.18.5'
+gem 'ember-rails', '0.19.0'
 gem 'ember-source', '2.13.3'
 gem 'ember-handlebars-template', '0.7.5'
 gem 'barber'
 
 gem 'message_bus'
 
-gem 'rails_multisite'
+gem 'rails_multisite', '>= 2.0.6'
 
 gem 'fast_xs', platform: :mri
 
@@ -64,7 +64,7 @@ gem 'email_reply_trimmer', '~> 0.1'
 gem 'discourse_image_optim', require: 'image_optim'
 gem 'multi_json'
 gem 'mustache'
-gem 'nokogiri'
+gem 'nokogiri', '>= 1.18.9'
 
 gem 'omniauth'
 gem 'omniauth-openid'
@@ -84,9 +84,9 @@ gem 'pry-rails', require: false
 gem 'r2', '~> 0.2.5', require: false
 gem 'rake'
 
-gem 'thor', require: false
+gem 'thor', '>= 1.4.0', require: false
 gem 'rinku'
-gem 'sanitize'
+gem 'sanitize', '>= 4.6.6'
 gem 'sidekiq'
 
 # for sidekiq web
@@ -121,9 +121,9 @@ group :test, :development do
   gem 'mocha', require: false
   gem 'rb-fsevent', require: RUBY_PLATFORM =~ /darwin/i ? 'rb-fsevent' : false
   gem 'rb-inotify', '~> 0.9', require: RUBY_PLATFORM =~ /linux/i ? 'rb-inotify' : false
-  gem 'rspec-rails', require: false
+  gem 'rspec-rails', '>= 3.8.0', require: false
   gem 'shoulda', require: false
-  gem 'rspec-html-matchers'
+  gem 'rspec-html-matchers', '>= 0.9.2'
   gem 'pry-nav'
   gem 'byebug', require: ENV['RM_INFO'].nil?
   gem 'rubocop', require: false
@@ -135,7 +135,7 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'annotate'
-  gem 'foreman', require: false
+  gem 'foreman', '>= 0.86.0', require: false
 end
 
 # this is an optional gem, it provides a high performance replacement
@@ -161,14 +161,14 @@ gem 'rbtrace', require: false, platform: :mri
 gem 'gc_tracer', require: false, platform: :mri
 
 # required for feed importing and embedding
-gem 'ruby-readability', require: false
+gem 'ruby-readability', '>= 0.7.1', require: false
 
 gem 'stackprof', require: false, platform: :mri
 gem 'memory_profiler', require: false, platform: :mri
 
 gem 'cppjieba_rb', require: false
 
-gem 'lograge', require: false
+gem 'lograge', '>= 0.11.0', require: false
 gem 'logstash-event', require: false
 gem 'logstash-logger', require: false
 gem 'logster'
