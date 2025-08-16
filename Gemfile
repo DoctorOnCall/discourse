@@ -17,7 +17,7 @@ else
   gem 'actionpack', '5.2'
   gem 'actionview', '5.2'
   gem 'activemodel', '5.2'
-  gem 'activerecord', '5.2'
+  gem 'activerecord', '7.1.5.2'
   gem 'activesupport', '5.2'
   gem 'railties', '5.2'
   gem 'sprockets-rails'
@@ -45,7 +45,7 @@ gem 'barber'
 
 gem 'message_bus'
 
-gem 'rails_multisite'
+gem 'rails_multisite', '>= 5.0.0'
 
 gem 'fast_xs', platform: :mri
 
@@ -134,7 +134,7 @@ group :development do
   gem 'bullet', require: !!ENV['BULLET']
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'annotate'
+  gem 'annotate', '>= 3.2.0'
   gem 'foreman', require: false
 end
 
