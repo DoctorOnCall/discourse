@@ -69,14 +69,14 @@ gem 'nokogiri'
 gem 'omniauth'
 gem 'omniauth-openid'
 gem 'openid-redis-store'
-gem 'omniauth-facebook'
+gem 'omniauth-facebook', '>= 6.0.0'
 gem 'omniauth-twitter'
 gem 'omniauth-instagram'
-gem 'omniauth-github'
+gem 'omniauth-github', '>= 1.4.0'
 
-gem 'omniauth-oauth2', require: false
+gem 'omniauth-oauth2', '>= 1.6.0', require: false
 
-gem 'omniauth-google-oauth2'
+gem 'omniauth-google-oauth2', '>= 0.5.4'
 gem 'oj'
 gem 'pg'
 gem 'mini_sql'
@@ -108,7 +108,7 @@ group :test do
   gem 'webmock', require: false
   gem 'fakeweb', '~> 1.3.0', require: false
   gem 'minitest', require: false
-  gem 'danger'
+  gem 'danger', '>= 9.2.0'
 end
 
 group :test, :development do
